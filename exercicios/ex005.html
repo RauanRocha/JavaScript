@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Primeiros Passos com DOM </title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="header"> Iniciando Estudos Com Dom </h1>
+        <p> Aqui vai o Resultado </p>
+        <p> Aprendendo a usar DOM em JavaScript </p>
+        <div> Clique em mim </div>
+        <script>
+            // var titulo = document.getElementById('header')
+            var div = document.getElementsByTagName('div')[0]
+            var titulo = document.querySelector('h1#header')
+            div.style.color = 'rgb(0, 208, 208)'
+            titulo.style.background = 'rgb(0, 208, 208)'
+            div.style.textAlign = 'center'
+            div.style.textIndent = '0px'
+        </script>
+    </main>
+</body>
+</html>
