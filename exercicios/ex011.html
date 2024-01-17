@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário </title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+        input{
+            width: 100px;
+            margin: 0px 3px;
+
+        }
+
+        #res {
+            display: none;
+            text-align: center;
+            margin-top: 5px;
+            text-indent: 0px;
+        }
+
+        p{
+            text-align: center;
+            margin: 5px;
+        }
+
+        strong{
+            color: rgb(255, 98, 125);
+        }
+
+        #texto {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> Nacionalidade </h1>
+            <div id="texto">
+                Em que pais você nasceu:<input type="text" id="pais">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+        <div id="res"> Resultado </div>
+    </main>
+    <script>
+        function verificar() {
+            var txtpais = document.querySelector('input#pais')
+            var pais = txtpais.value
+            var res = document.querySelector('div#res')
+            if ( pais == 'Brasil') {
+                res.innerHTML = `Você mora no <strong>${pais}</strong>, você é <strong>Brasileiro!!!</strong>`
+            } else {
+                res.innerHTML = `Você mora no <strong>${pais}</strong>, você é Estrangeiro!!!`
+            }
+            res.style.display = 'block'
+        }
+    </script>
+</html>

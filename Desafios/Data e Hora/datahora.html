@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data e Hora </title>
+    <link rel="stylesheet" href="Estilo/style.css">
+</head>
+<body>
+    <h1> Hora do dia </h1>
+    <main>
+        <h2> Bom Dia!!! </h2>
+        <p> ### </p>
+        <div id="imagem"></div>
+    </main>
+    <script>
+        var dia = new Date()
+        var hora = dia.getHours()
+
+        var titulo = document.querySelector('h2')
+        var div = document.getElementById('imagem')
+        var p = document.querySelector('p')
+
+        if ( hora < 12 ){
+            titulo.innerHTML = 'Bom dia!!!'
+            titulo.style.backgroundColor = '#e59636'
+
+            p.innerHTML = `Agora são ${hora} horas`
+            div.style.backgroundImage = "url('Imagens/manha.jpg')"
+            document.body.style.backgroundColor = '#ffe9b6'
+
+        } else if ( hora <= 18 ) {
+            titulo.innerHTML = 'Boa Tarde!!!'
+            titulo.style.backgroundColor = '#f3562b'
+
+            p.innerHTML = `Agora são ${hora} horas`
+            div.style.backgroundImage = "url('Imagens/tarde.jpg')"
+            document.body.style.backgroundColor = '#e7c4bb'
+
+        } else {
+            titulo.innerHTML = 'Boa Noite!!!'
+            titulo.style.backgroundColor = '#b747bc'
+
+            p.innerHTML = `Agora são ${hora} horas`
+            div.style.backgroundImage = "url('Imagens/noite.jpg')"
+            document.body.style.backgroundColor = '#eac1ec'
+        }
+    </script>
+    <footer> 
+        <p id="pe">@RauanRocha</p> 
+    </footer>
+</body>
+</html>

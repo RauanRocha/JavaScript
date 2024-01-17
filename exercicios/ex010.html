@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário </title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <style>
+        input{
+            width: 100px;
+            margin: 0px 7px;
+
+        }
+
+        #res {
+            display: none;
+            text-align: center;
+            margin-top: 5px;
+            text-indent: 0px;
+        }
+
+        p{
+            text-align: center;
+            margin: 5px;
+        }
+
+        strong{
+            color: rgb(255, 98, 125);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> Somando Valores </h1>
+            <div>
+                Velocidade do carro: <input type="number" name="txt1" id="txt1">
+                <input type="button" value="Calcular" onclick="calcular()">
+            </div>
+        <div id="res"> Resultado </div>
+    </main>
+    <script>
+        function calcular(){
+            var tn1 = document.getElementById('txt1')
+            var n1 = Number(tn1.value)
+            var res = document.getElementById('res')
+            res.innerHTML =`Sua velocidade atual é de <strong>${n1}Km/h</strong>`
+            if ( n1 > 80) {
+                res.innerHTML += '<p><strong>Você ultrapassou o limite da via. Multado!!!</strong>'
+            }
+            
+            res.innerHTML += '<p> Dirija sempre com o Cinto de Segurança </p>'
+            
+            
+            
+            res.style.display = 'block'
+        }
+    </script>
+</html>
